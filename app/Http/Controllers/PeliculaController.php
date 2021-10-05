@@ -14,10 +14,9 @@ class PeliculaController extends Controller
      */
     public function index()
     {
-        $peliculas = Pelicula::latest()->paginate(5);
+        $peliculas = Pelicula::latest()->paginate(5);;
 
-        return view('peliculas.index', compact('peliculas'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('peliculas.index', compact('peliculas'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -42,7 +41,7 @@ class PeliculaController extends Controller
             'nombre' => 'required',
             'anio' => 'required',
             'director' => 'required',
-            'sinopsis' => 'required'
+            'descripcion' => 'required'
         ]);
 
         Pelicula::create($request->all());
@@ -70,7 +69,7 @@ class PeliculaController extends Controller
      */
     public function edit(Pelicula $pelicula)
     {
-        return view('pelicula.edit', compact('pelicula'));
+        return view('peliculas.edit', compact('pelicula'));
     }
 
     /**
@@ -86,7 +85,7 @@ class PeliculaController extends Controller
             'nombre' => 'required',
             'anio' => 'required',
             'director' => 'required',
-            'sinopsis' => 'required'
+            'descripcion' => 'required'
         ]);
 
         $pelicula->update($request->all());

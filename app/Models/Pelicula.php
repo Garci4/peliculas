@@ -17,6 +17,5 @@ class Pelicula extends Model
         'anio',
         'director',
         'descripcion',
-        'created_at',
     ];
 }
