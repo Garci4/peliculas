@@ -1,64 +1,28 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h2 align="center">Universidad Nacional de la Patagonia San Juan Bosco</h2>
+<h2 align="center">Aplicaciones Web</h2>
+<h3 align="center">Proyecto de Examen Final Libre</h3>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## El proyecto
 
-## About Laravel
+El proyecto consiste en una aplicación web full-stack. Esto significa que debemos realizar desarrollos tanto del lado cliente como del lado servidor, de manera ordenada y con apropiada separación de responsabilidades.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+El front-end debe realizarseen React o Vue, mientras que el Back-end debe implementarse en Laravel. Existen tres instancias de defensa,que se realizarán en el siguiente orden:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   **Back-end**
+-   **API**
+-   **Front-end**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+La aplicación consiste en un repositorio de películas, con los siguientes requerimientos:
 
-## Learning Laravel
+-   El back-end debe implementar altas, bajas y modificaciones sobre datos básicos de una película: nombre, año, directory sinopsis.La vista de la aplicación back-end debe usar Blade y puede ser simple, sin mucha decoración estética. Posee un solo usuario que puede realizar todas las acciones necesarias sobre los datos
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   El API ofrece una interfaz REST para obtenerdatos de películas, como mínimo:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    -   **Obtener todas las películas**
+    -   **Obtener todas las películas de un año determinado**
+    -   **Obtener todos los datos de una película determinada**
+    -   **Obtener la sinopsis de una película**
 
-## Laravel Sponsors
+    -   La documentación del API debe realizarse en Swagger para permitir probarla
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   El front-end debe implementarse en React o Vuey ofrece los datos a los usuarios finales. Por esta razón se pone mayor énfasis en el diseño visual. Debe ser responsivapara poder verseapropiadamente enun celular o Tablet.oAdicionalmente, el front-end muestra el poster de la película, si puede obtenerlo de un servicio web externo como Open Movie Database API (OMDBs)
