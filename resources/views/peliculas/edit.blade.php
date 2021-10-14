@@ -51,7 +51,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Descripcion:</strong>
-                    <textarea class="form-control" style="height:50px" name="decripcion"
+                    <textarea class="form-control" style="height:50px" name="descripcion"
                         placeholder="Descripcion">{{ $pelicula->descripcion }}</textarea>
                 </div>
             </div>

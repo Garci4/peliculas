@@ -14,7 +14,7 @@ class PeliculaController extends Controller
      */
     public function index()
     {
-        $peliculas = Pelicula::latest()->paginate(5);;
+        $peliculas = Pelicula::latest()->paginate(5);
 
         return view('peliculas.index', compact('peliculas'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -104,7 +104,7 @@ class PeliculaController extends Controller
     {
         $pelicula->delete();
 
-        return redirect()->route('pelicula.index')
+        return redirect()->route('peliculas.index')
             ->with('success', 'Pelicula borrada!');
     }
 }

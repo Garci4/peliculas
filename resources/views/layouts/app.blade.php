@@ -19,9 +19,10 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: #9C27B0;
-            color: white;
+            background-color: #96edf6 ;
+            color:  #8c8c8c ;
             text-align: center;
+            size: 15;
         }
 
     </style>
@@ -39,8 +40,8 @@
     <div class="text-center footer">
 
         <h4>
-          Check my linkedin account
-          <a href="https://www.linkedin.com/in/garci4">LINKEDIN</a>
+          Made by 
+          <a href="https://www.linkedin.com/in/garci4">Julián García</a>
         </h4>
 
     </div>

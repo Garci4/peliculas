@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Laravel 8 CRUD </h2>
+                <h2>Peliculas</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('peliculas.create') }}" title="Create pelicula"> <i class="fas fa-plus-circle"></i>
+                <a class="btn btn-success" href="{{ route('peliculas.create') }}" title="Create pelicula"> <i class="fas fa-plus-circle"></i> AGREGAR PELICULA
                     </a>
             </div>
         </div>
@@ -47,7 +47,7 @@
                         @method('DELETE')
 
                         <button type="submit" title="delete" style="border: none; background-color:transparent;">
-                            <i class="fas fa-trash fa-lg text-danger"></i>
+                            <i class="fas fa-trash-alt fa-lg text-danger"></i>
 
                         </button>
                     </form>

@@ -7,7 +7,7 @@
                 <h2>Agregar una nueva pelicula</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('peliculas.index') }}" title="Atras"> <i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{ route('peliculas.index') }}" title="Atras"> <i class="fas fa-backward "></i> VOLVER </a>
             </div>
         </div>
     </div>
