@@ -14,7 +14,7 @@ El front-end debe realizarseen React o Vue, mientras que el Back-end debe implem
 
 La aplicación consiste en un repositorio de películas, con los siguientes requerimientos:
 
--   El back-end debe implementar altas, bajas y modificaciones sobre datos básicos de una película: nombre, año, directory sinopsis.La vista de la aplicación back-end debe usar Blade y puede ser simple, sin mucha decoración estética. Posee un solo usuario que puede realizar todas las acciones necesarias sobre los datos
+-   El back-end debe implementar altas, bajas y modificaciones sobre datos básicos de una película: nombre, año, director y sinopsis. La vista de la aplicación back-end debe usar Blade y puede ser simple, sin mucha decoración estética. Posee un solo usuario que puede realizar todas las acciones necesarias sobre los datos
 
 -   El API ofrece una interfaz REST para obtenerdatos de películas, como mínimo:
 
@@ -25,4 +25,5 @@ La aplicación consiste en un repositorio de películas, con los siguientes requ
 
     -   La documentación del API debe realizarse en Swagger para permitir probarla
 
--   El front-end debe implementarse en React o Vuey ofrece los datos a los usuarios finales. Por esta razón se pone mayor énfasis en el diseño visual. Debe ser responsivapara poder verseapropiadamente enun celular o Tablet.oAdicionalmente, el front-end muestra el poster de la película, si puede obtenerlo de un servicio web externo como Open Movie Database API (OMDBs)
+-   El front-end debe implementarse en React o Vue y ofrece los datos a los usuarios finales. Por esta razón se pone mayor énfasis en el diseño visual. Debe ser responsivapara poder verseapropiadamente enun celular o Tablet.
+    -   Adicionalmente, el front-end muestra el poster de la película, si puede obtenerlo de un servicio web externo como Open Movie Database API (OMDBs)
