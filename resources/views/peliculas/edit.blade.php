@@ -37,7 +37,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Año:</strong>
-                    <input class="form-control" style="height:50px" name="anio" value="{{ $pelicula->anio }}"
+                    <input type="number" class="form-control" style="height:50px" name="anio" value="{{ $pelicula->anio }}"
                         placeholder="Año">
                 </div>
             </div>
