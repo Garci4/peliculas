@@ -22,7 +22,7 @@ Route::get('/', function () {
 //Se agregan rutas para CRUD
 Route::resource('peliculas', PeliculaController::class);
 
-Auth::routes(['register' => false]);
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('peliculas');
 
