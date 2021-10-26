@@ -27,3 +27,7 @@ Auth::routes(['register' => false]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('peliculas');
 
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
+
+Route::get('/do', function() {
+    return view('swagger.index');
+});
