@@ -2,6 +2,17 @@
 
 @section('content')
     <div class="row">
+        <br></br>
+        <div class="pull-right">
+        @if (Route::has('login'))
+            <div class="hidden fixed sm:block col-lg-12 margin-tb">
+                @auth
+                    <a href="{{ url('/logout') }}" class="btn btn-warning text-sm">logout</a>
+                @endauth
+            </div>
+        @endif
+        </div>
+        <br></br>
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>Peliculas</h2>
@@ -10,10 +21,9 @@
                 <a class="btn btn-success" href="{{ route('peliculas.create') }}" title="Create pelicula"> <i class="fas fa-plus-circle"></i> AGREGAR PELICULA
                     </a>
             </div>
+            
         </div>
     </div>
-
-    
 
     <table class="table table-bordered table-responsive-lg">
         <tr>
