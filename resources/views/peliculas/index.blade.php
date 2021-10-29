@@ -32,25 +32,24 @@
                 <td>{{ $pelicula->director }}</td>
                 <td>{{ $pelicula->descripcion }}</td>
                 <td>
-                    <form action="{{ route('peliculas.destroy', $pelicula->id) }}" method="POST">
+                <div>
+                    <a href="{{ route('peliculas.show', $pelicula->id) }}" title="show">
+                        <i class="fas fa-eye text-success  fa-lg"></i>
+                    </a>
 
-                        <a href="{{ route('peliculas.show', $pelicula->id) }}" title="show">
-                            <i class="fas fa-eye text-success  fa-lg"></i>
-                        </a>
+                    <a href="{{ route('peliculas.edit', $pelicula->id) }}">
+                        <i class="fas fa-edit  fa-lg"></i>
+                    </a>
+                    <form action="{{ route('peliculas.destroy', $pelicula->id) }}" class="form-to-delete" method="POST">
 
-                        <a href="{{ route('peliculas.edit', $pelicula->id) }}">
-                            <i class="fas fa-edit  fa-lg"></i>
-
-                        </a>
-
-                        @csrf
                         @method('DELETE')
+                        @csrf
 
                         <button type="submit" title="delete" style="border: none; background-color:transparent;">
                             <i class="fas fa-trash-alt fa-lg text-danger"></i>
-
                         </button>
                     </form>
+                </div>
                 </td>
             </tr>
         @endforeach
@@ -58,4 +57,42 @@
 
     {!! $peliculas->links() !!}
 
+@endsection
+
+@section('js')
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @if (session('eliminar') == 'ok')
+        <script>
+            Swal.fire(
+                'Eliminada!',
+                'La pelicula fue eliminada.',
+                'success'
+                )
+        </script>
+
+    @endif
+    <script>
+        console.log("estoy en script")
+        $('.form-to-delete').submit(function(e) {
+            console.log("estoy en form delete")
+            e.preventDefault();
+
+            Swal.fire({
+            title: 'Estas seguro?',
+            text: "No vas a poder deshacer esta acción",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Borrar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.submit();
+                }
+            })
+        })
+
+        
+    </script>
 @endsection

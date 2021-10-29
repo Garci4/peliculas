@@ -109,6 +109,6 @@ class PeliculaController extends Controller
         $pelicula->delete();
 
         return redirect()->route('peliculas.index')
-            ->with('success', 'Pelicula borrada!');
+            ->with('eliminar', 'ok');
     }
 }
